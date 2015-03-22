@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Welcome</title>
+    <title>Divneet Sethi - <%= title %></title>
     <link rel="stylesheet" href="/stylesheets/css/foundation.css" />
     <script src="/javascripts/js/vendor/modernizr.js"></script>
   </head>
@@ -16,12 +16,12 @@
         </ul>
         <section class="top-bar-section">
             <ul class="left">
-                <li><a href="index.html" style="color:#FF6600"><b>Home</b></a></li>
-                <li><a href="about.html">About Me</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="services.html">Services</a></li>
+                <li><a href="/" style="color:#FF6600"><b>Home</b></a></li>
+                <li><a href="/about">About Me</a></li>
+                <li><a href="/projects">Projects</a></li>
+                <li><a href="/services">Services</a></li>
                 <li><a href="https://github.com/DivneetSethi" target="_blank">GitHub</a></li>
-                <li><a href="contact.html">Contact Me</a></li>
+                <li><a href="/contact">Contact Me</a></li>
             </ul>
         </section>
         <section class="top-bar-section">
@@ -35,6 +35,15 @@
     <ul class="breadcrumbs">
         <li><a href="index.html" class="unavailable" >Home</a></li>
     </ul>
+
+
+    
+    <%     if(title=="about") { %>
+    <%     include partials/about.ejs %>
+    <%     } %>
+
+    
+    
     <div class="row">
         <div class="large-8 columns">
             <div class="panel">
@@ -79,9 +88,7 @@
     </div>
 
     <!--Copyright footer-->
-    <div class="footer" style="color:#aaa;text-align:center;line-height:50px">
-        &copy;Copyright Divneet Sethi 2015&nbsp;|&nbsp;<a href="terms.html">Terms of Use</a>&nbsp;|&nbsp;<a href="privacy.html">Privacy</a>
-    </div>
+   <% include partials/footer.ejs %>
 
     <script src="js/vendor/jquery.js"></script>
     <script src="js/foundation.min.js"></script>
