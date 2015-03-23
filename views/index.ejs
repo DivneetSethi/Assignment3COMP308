@@ -9,89 +9,40 @@
   </head>
   <body>
     
-    <!--Navigation bar-->
-    <nav class="top-bar">
-        <ul class="title-area">
-            <li class="name"><h1><a href="index.html">Divneet Sethi</a></h1></li>
-        </ul>
-        <section class="top-bar-section">
-            <ul class="left">
-                <li><a href="/" style="color:#FF6600"><b>Home</b></a></li>
-                <li><a href="/about">About Me</a></li>
-                <li><a href="/projects">Projects</a></li>
-                <li><a href="/services">Services</a></li>
-                <li><a href="https://github.com/DivneetSethi" target="_blank">GitHub</a></li>
-                <li><a href="/contact">Contact Me</a></li>
-            </ul>
-        </section>
-        <section class="top-bar-section">
-            <ul class="right">
-                <li><a href="https://ca.linkedin.com/pub/divneet-singh-sethi/80/b21/915"><img src="/images/linkedin-logo.png" width="30" height="30" /></a></li>
-            </ul>
-        </section>
-    </nav>
-
-    <!--Bread crumbs-->
-    <ul class="breadcrumbs">
-        <li><a href="index.html" class="unavailable" >Home</a></li>
-    </ul>
-
-
+    <%     if(title=="Home") { %>
+    <%     include partials/home.ejs %>
+    <%     } %>
     
-    <%     if(title=="about") { %>
+    <%     if(title=="About Me") { %>
     <%     include partials/about.ejs %>
     <%     } %>
-
     
+    <%     if(title=="Projects") { %>
+    <%     include partials/projects.ejs %>
+    <%     } %>
     
-    <div class="row">
-        <div class="large-8 columns">
-            <div class="panel">
-                <h2>Divneet Sethi</h2>
-                <h3>Welcome to my Portfolio</h3>
-                <p align="justify"><b>Passion for creation invokes imaginion</b><br />
-                    Hello! I'm a graphic designer in Toronto, making the web more enjoyable by creating attractive websites for business and individuals who need an effective online presence.I believe in creating attractive yet simple design that work. Contact me to get in touch.
-                </p>
-                <a href="about.html" class="button round">Find out more!</a>
-            </div>
-        </div>
+    <%     if(title=="Services") { %>
+    <%     include partials/services.ejs %>
+    <%     } %>
 
-        <!--logo-->
-        <div class="large-4 columns">
-            <img src="/images/logo.jpg" />
-        </div>
-    </div>
-    <hr />
-
-    <!--Featured work slider-->
-    <div class="row">
-        <div class="large-12 columns">
-            <h2 align="center"><a href="projects.html">Featured Work</a></h2>
-            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-            <iframe src="http://slideful.com/v20150116_1113728378173688_ijf.htm" frameborder="0" style="border:0px;padding:0px;margin:0px;width:640px;height:310px;" allowtransparency="true"></iframe>
-        </div>
-    </div>
-    <hr />
-
-    <!--Keep connected panel-->
-    <div class="row">
-        <div class="large-12 columns">
-            <div class="panel">
-                <h3>Keep Connected...</h3>
-                <ul class="small-block-grid-2">
-                    <li><a href="https://ca.linkedin.com/pub/divneet-singh-sethi/80/b21/915"><img src="/images/linkedin-logo.png" align="right" /></a></li>
-                    <li><a href="https://www.facebook.com/divneet.sethi"><img src="/images/facebook-logo.png"/></a></li>
-
-                </ul>
-            </div>
-        </div>
-    </div>
-
+    <%     if(title=="Contact Me") { %>
+    <%     include partials/contact.ejs %>
+    <%     } %>
+    
+    <%     if(title=="Terms and Conditions") { %>
+    <%     include partials/terms.ejs %>
+    <%     } %>
+    
+    <%     if(title=="Privacy Policy") { %>
+    <%     include partials/privacy.ejs %>
+    <%     } %>
+    
     <!--Copyright footer-->
-   <% include partials/footer.ejs %>
+    <% include partials/footer.ejs %>
 
     <script src="js/vendor/jquery.js"></script>
     <script src="js/foundation.min.js"></script>
+    <script src="/public/javascripts/js/myFiles/contact_me.js"></script>
     <script>
         $(document).foundation();
     </script>
