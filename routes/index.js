@@ -36,4 +36,5 @@ router.get('/privacy', function(req, res, next) {
   res.render('index', { title: 'Privacy Policy' });
 });
 
+
 module.exports = router;
